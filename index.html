@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="javascript">
+    var content = document.createElement('div');
+    content.id = 'content';
+    content.style.backgroundColor = '#ddd';
+    var title = document.createElement('h1');
+    title.innerHTML = "BANG CUU CHUONG";
+    content.appendChild(title);
+    var table = document.createElement('table');
+    table.width = '50%';
+    for (var i = 1; i <= 10; i++) {
+        var tr = document.createElement('tr');
+        for (var j = 2; j <= 9; j++) {
+            var td = document.createElement('td');
+            td.innerHTML = j + "x" + i + "=" + j * i;
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+    }
+    content.appendChild(table);
+    document.getElementsByTagName('body')[0].appendChild(content);
+</script>
+</body>
+</html>
